@@ -11,7 +11,7 @@ const errorHandling = require('./middlewares/errorhandler')
 
 //mongoose
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/fancyTodo', {useNewUrlParser:true}, function(err){
+mongoose.connect('mongodb://localhost/recipeze', {useNewUrlParser:true}, function(err){
   if (err) throw err
   else console.log('mongoose connected')
 })
