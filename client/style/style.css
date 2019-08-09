@@ -1,5 +1,9 @@
 .brandNav{
-  color:white !important
+  color:white !important;
+}
+
+.navbar{
+  background-color: black !important;
 }
 
 .signInBox{
