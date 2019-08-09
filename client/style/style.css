@@ -1,0 +1,141 @@
+/* .brandNav{
+  color:white !important;
+} */
+
+.bmrbmibox{
+  background-color: black;
+  border-radius: 7%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 226px;
+}
+
+.checkNutri{
+  color: black;
+  background-color: white;
+  border: 3px solid black;
+}
+
+.checkNutri:hover{
+  color: white;
+  background-color: black;
+  border: 3px solid black;
+}
+
+.navbar{
+  background-color: black !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#buttonSignOut{
+  background-color: black;
+  border: 1px solid whitesmoke;
+  color: white
+}
+
+#buttonSignOut:hover{
+  background-color: whitesmoke;
+  border: 1px solid black;
+  color: black;
+  transition: 0.5s all;
+}
+
+.signInBox{
+  background-color: black;
+  width: 350px;
+  height: 450px;
+  border-radius: 7%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: whitesmoke;
+}
+
+.formLabel{
+  color: whitesmoke;
+}
+
+.signInBtn{
+  background-color: black;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  height: 40px;
+}
+
+.signInBtn:hover{
+  background-color: whitesmoke;
+  color: black;
+  transition: 0.5s all;
+}
+
+.signInhr{
+  border: 1px solid whitesmoke;
+  width: 40%;
+  margin: 20px 0px;
+}
+
+.orHr{
+  margin: 10px 14px;
+}
+
+.signUpSeparator{
+  border: 1px solid whitesmoke;
+  width: 70%;
+}
+
+.signInSeparator{
+  width: 70%;
+}
+
+.signUp{
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  height: 40px;
+}
+
+.signUp:hover{
+  background-color: whitesmoke;
+  color: black;
+  transition: 0.5s all;
+}
+
+nav {
+  background-color: #EAEAEA !important
+}
+
+body{
+  background-color: #FFFFFF
+}
+
+.inputDataForm{
+  background-color: black;
+  width: 300px;
+  height: 430px;
+  border-radius: 7%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+  color: whitesmoke;
+}
+
+.submitData{
+  background-color: black;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  height: 40px;
+}
+
+.submitData:hover{
+  background-color:whitesmoke;
+  color: black;
+  height: 40px;
+}
+
+.container{
+  width: 70%;
+  margin-left: 21%;
+}
+
+#search-result{
+  /* left: 50px; */
+}
+
+.foodVideo{
+  margin-left: 100px;
+}
