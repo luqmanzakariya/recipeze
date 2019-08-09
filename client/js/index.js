@@ -3,6 +3,14 @@ const baseUrl = `http://localhost:3000`
 $(document).ready(function () {
   isLogin()
   renderButton()
+  $('#form-nutrition').submit(function(event){
+    event.preventDefault()
+    let input={
+      food: $('#input-food').val(),
+      nutrition: $('#input-nutrition').val()
+    }
+    getNutrition(input)
+  })
 })
 
 function onSuccess(googleUser) {
@@ -25,15 +33,6 @@ function renderButton() {
   });
 }
 
-  $('#form-nutrition').submit(function(event){
-    event.preventDefault()
-    let input={
-      food: $('#input-food').val(),
-      nutrition: $('#input-nutrition').val()
-    }
-    getNutrition(input)
-  })
-})
 
 //============= Get Nutrition =============
 function getNutrition(input){
