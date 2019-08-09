@@ -66,3 +66,26 @@ nav {
 body{
   background-color: #FFFFFF
 }
+
+.inputDataForm{
+  background-color: black;
+  width: 300px;
+  height: 430px;
+  border-radius: 7%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+  color: whitesmoke;
+}
+
+.submitData{
+  background-color: black;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  height: 40px;
+}
+
+.submitData:hover{
+  background-color:whitesmoke;
+  color: black;
+  height: 40px;
+}

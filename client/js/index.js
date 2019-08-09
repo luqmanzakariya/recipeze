@@ -13,6 +13,9 @@ $(document).ready(function () {
   })
 })
 
+
+
+
 function onSuccess(googleUser) {
   console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
 }
