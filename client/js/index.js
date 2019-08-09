@@ -3,10 +3,6 @@ const baseUrl = `http://localhost:3000`
 $(document).ready(function () {
   isLogin()
   renderButton()
-<<<<<<< HEAD
-=======
-
->>>>>>> enter
   $('#form-nutrition').submit(function(event){
     event.preventDefault()
     let input={
