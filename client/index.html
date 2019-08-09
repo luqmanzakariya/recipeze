@@ -16,9 +16,7 @@
 <body>
   <nav class="d-flex justify-content-between navbar navbar-expand-sm navbar-dark">
     <div>
-      <img class="navbar-brand"
-        src="./style/logo.png"
-        style="height:70px;width:120px">
+      <img class="navbar-brand" src="./style/logo.png" style="height:70px;width:120px">
     </div>
 
     <div class="d-flex">
@@ -57,8 +55,7 @@
     </div>
   </div>
 
-  <div class="afterLogin col-sm-6 mr-5">
-
+  <div class="afterLogin col-sm-6 container">
     <div class="d-flex row justify-content-center mt-3">
       <!-- Input data form -->
       <div class="col-sm-5 inputDataForm text-center pt-3">
@@ -67,38 +64,68 @@
           <form id="submitData" action="" method="post">
             <div class="mt-2">
               <label class="formLabel" for="">Gender</label>
-              <input class="formBox form-control col-sm-8" type="text" name="gender" autocomplete="off" placeholder="Input your gender">
+              <input id="gender" class="formBox form-control col-sm-8" type="text" name="gender" autocomplete="off"
+                placeholder="Input gender">
             </div>
             <div class="mt-2">
               <label class="formLabel" for="">Height</label>
-              <input class="formBox form-control col-sm-8" type="text" name="height" autocomplete="off" placeholder="Input your height">
+              <input id="height" class="formBox form-control col-sm-8" type="text" name="height" autocomplete="off"
+                placeholder="Input height">
             </div>
             <div class="mt-2">
               <label class="formLabel" for="">Weight</label>
-              <input class="formBox form-control col-sm-8" type="text" name="weight" autocomplete="off" placeholder="Input weight">
+              <input id="weight" class="formBox form-control col-sm-8" type="text" name="weight" autocomplete="off"
+                placeholder="Input weight">
             </div>
             <div class="mt-2">
               <label class="formLabel" for="">Age</label>
-              <input class="formBox form-control col-sm-8" type="text" name="age" autocomplete="off" placeholder="Input age">
+              <input id="age" class="formBox form-control col-sm-8" type="text" name="age" autocomplete="off"
+                placeholder="Input age">
             </div>
-            <button class="btn submitData mt-3">Sign In</button>
+            <button class="btn submitData mt-3">submit</button>
         </center>
         </form>
       </div>
 
 
+      <div>
+        <div>
+          <form id="form-nutrition">
+            <div class="d-flex flex-column">
+              <label>What to eat?</label>
+              <input class="form-control" type="text" id="input-food" placeholder="Ex: Noodles, Sushi, Meat">
+            </div>
+            <div class="d-flex flex-column">
+              <label>Nutrition</label>
+              <input class="form-control" type="text" id="input-nutrition" placeholder="Ex: Calcium">
+              <button class="btn checkNutri btn-primary mt-2" id="btn-nutrition" type="submit">Check</button>
+            </div>
+          </form>
+        </div>
 
-      <form id="form-nutrition">
-        <div class="d-flex flex-column">
-          <label>What to eat?</label>
-          <input type="text" id="input-food" placeholder="Ex: Noodles, Sushi, Meat">
+        <div class="bmrbmibox text-center pt-1 mt-3">
+          <form action="" method="get">
+            <center>
+              <div class="mt-2 ">
+                <label class="formLabel" for="">BMR</label>
+                <div id="bmr">
+                  <input id="bmr" class="formBox form-control col-sm-8" type="text" name="gender" autocomplete="off"
+                    placeholder="not calculate">
+                </div>
+              </div>
+              <div class="mt-2">
+                <label class="formLabel" for="">BMI</label>
+                <div id="bmi">
+                  <input class="formBox form-control col-sm-8" type="text" name="height" autocomplete="off"
+                    placeholder="not calculate">
+                </div>
+              </div>
+            </center>
+          </form>
         </div>
-        <div class="d-flex flex-column">
-          <label>Nutrition</label>
-          <input type="text" id="input-nutrition" placeholder="Ex: Calcium">
-          <button class="btn btn-primary mt-2" id="btn-nutrition" type="submit">Check</button>
-        </div>
-      </form>
+      </div>
+
+
     </div>
 
 

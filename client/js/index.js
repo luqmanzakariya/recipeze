@@ -2,11 +2,21 @@ const baseUrl = `http://localhost:3000`
 
 $(document).ready(function () {
   isLogin()
-  
-  $('#form-nutrition').submit(function(event){
+  $('#submitData').submit(function (event) {
+    event.preventDefault()
+    let data = {
+      gender: $('#gender').val(),
+      height: $('#height').val(),
+      weight: $('#weight').val(),
+      age: $('#age').val(),
+    }
+    getBmi(data)
+  })
+
+  $('#form-nutrition').submit(function (event) {
     event.preventDefault()
     console.log('masuk')
-    let input={
+    let input = {
       food: $('#input-food').val(),
       nutrition: $('#input-nutrition').val()
     }
@@ -14,6 +24,25 @@ $(document).ready(function () {
   })
 })
 
+function getBmi(data) {
+  axios({
+    url: `${baseUrl}/getBmi`,
+    method: 'post',
+    data: data
+  })
+    .then(({ data }) => {
+      console.log(data)
+      $('#bmr').empty()
+      $('#bmi').empty()
+      $('#bmr').append(`<input class="formBox form-control col-sm-8" type="text" name="height" autocomplete="off"
+    placeholder="${data.bmr}">`)
+      $('#bmi').append(`<input class="formBox form-control col-sm-8" type="text" name="height" autocomplete="off"
+    placeholder="${data.result.toFixed(1)}">`)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+}
 
 
 
@@ -39,19 +68,19 @@ $(document).ready(function () {
 
 
 //============= Get Nutrition =============
-function getNutrition(input){
+function getNutrition(input) {
   console.log('masuk', input)
   axios({
     url: `${baseUrl}/nutrition/?food=${input.food}&nutrition=${input.nutrition}`,
     method: 'get',
     dataType: 'json',
   })
-    .then(({data})=>{
-      if (data.answer){
+    .then(({ data }) => {
+      if (data.answer) {
         Swal.fire({
           title: '<strong>Nutrition <u>Info</u></strong>',
           html:
-          `<img src="${data.image}" alt="Image Food"><br>` +
+            `<img src="${data.image}" alt="Image Food"><br>` +
             `${data.answer}`,
           showCloseButton: true,
           showCancelButton: false,
@@ -66,7 +95,7 @@ function getNutrition(input){
         })
       }
     })
-    .catch((err)=>{
+    .catch((err) => {
       console.log(err)
     })
 }

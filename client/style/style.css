@@ -2,6 +2,25 @@
   color:white !important;
 } */
 
+.bmrbmibox{
+  background-color: black;
+  border-radius: 7%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 226px;
+}
+
+.checkNutri{
+  color: black;
+  background-color: white;
+  border: 3px solid black;
+}
+
+.checkNutri:hover{
+  color: white;
+  background-color: black;
+  border: 3px solid black;
+}
+
 .navbar{
   background-color: black !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
