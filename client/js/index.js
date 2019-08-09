@@ -170,14 +170,14 @@ function youtubeSearch(q) {
       method: 'GET'
   })
   .done(function (results) {
-      let raw = ''
-      results.items.forEach(result => {
-        raw += `<iframe width="420" height="315"
-        src="https://www.youtube.com/embed/${result.id.videoId}">
-        </iframe>`
-      })
       $('#search-result').empty()
-      $('#search-result').append(raw)
+      results.items.forEach(result => {
+        $('#search-result').append(`
+        <div class="foodVideo"><iframe width="480" height="360"
+        src="https://www.youtube.com/embed/${result.id.videoId}">
+        </iframe>
+        </div>`)
+      })
   })
   .fail(function (jqXHR, textstatus) {
       console.log('fail', textstatus)
