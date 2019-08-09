@@ -25,78 +25,22 @@
       <button class="btn btn-danger" id="buttonSignOut" onclick="signOut();">Sign out</button>
     </div>
   </nav>
-  
-<!-- sign in form -->
-  <div class="signInBox text-center pt-3">
-    <center>
-      <h5>Sign In</h5>
-      <div id="my-signin2" class=""></div>
-      <div class="signInSeparator row">
-        <hr class="signInhr">
-        <h6 class="orHr">Or</h6>
-        <hr class="signInhr">
-      </div>
-      <!-- <div class="g-signin2" id="buttonSignIn" data-onsuccess="onSignIn"></div> -->
-      <form id="signIn" action="" method="post">
-        <div class="">
-          <label class="formLabel" for="">Email</label>
-          <input class="formBox form-control col-sm-8" type="text" placeholder="Input your email address">
-        </div>
-        <div class="mt-2">
-          <label class="formLabel col-sm-8" for="">Password</label>
-          <input class="formBox form-control col-sm-8" type="text" placeholder="Input your password">
-        </div>
-        <button class="btn signInBtn mt-3">Sign In</button>
-        <hr class="signUpSeparator">
-        <button class="btn signUp">Sign Up with new Account</button>
-    </center>
-    </form>
-  </div>
 
-  <!-- Input data form -->
-  <div class="inputDataForm text-center pt-3">
-    <center>
-      <h5>Input your data</h5>
-      <form id="submitData" action="" method="post">
-        <div class="mt-2">
-          <label class="formLabel" for="">Gender</label>
-          <input class="formBox form-control col-sm-8" type="text" name="gender" placeholder="Input your gender">
-        </div>
-        <div class="mt-2">
-          <label class="formLabel" for="">Height</label>
-          <input class="formBox form-control col-sm-8" type="text" name="height" placeholder="Input your height">
-        </div>
-        <div class="mt-2">
-          <label class="formLabel" for="">Weight</label>
-          <input class="formBox form-control col-sm-8" type="text" name="weight" placeholder="Input weight">
-        </div>
-        <div class="mt-2">
-          <label class="formLabel" for="">Age</label>
-          <input class="formBox form-control col-sm-8" type="text" name="age" placeholder="Input age">
-        </div>
-        <button class="btn submitData mt-3">Sign In</button>
-    </center>
-    </form>
-  </div>
-
-  
-  <div class="d-flex row justify-content-center mt-3">
-    <div class="col-sm-6">
-        
-        <div class="signInBox text-center pt-3">
-        <form action="" method="post">
-          <center>
+  <div class="beforeLogin d-flex row justify-content-center mt-4">
+    <div class="signInBox text-center pt-3">
+      <form action="" method="post">
+        <center>
           <h5>Sign In</h5>
-          
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
-            <!-- <div class="g-signin2" data-onsuccess="onSignIn" id="my-signin2" class=""></div> -->
-            <div class="signInSeparator row">
-              <hr class="signInhr">
-              <h6 class="orHr">Or</h6>
-              <hr class="signInhr">
-            </div>
-    
-    
+
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
+          <!-- <div class="g-signin2" data-onsuccess="onSignIn" id="my-signin2" class=""></div> -->
+          <div class="signInSeparator row">
+            <hr class="signInhr">
+            <h6 class="orHr">Or</h6>
+            <hr class="signInhr">
+          </div>
+
+
           <div class="">
             <label class="formLabel" for="">Email</label>
             <input class="formBox form-control col-sm-8" type="text" placeholder="Input your email address">
@@ -109,8 +53,40 @@
           <hr class="signUpSeparator">
           <button class="btn signUp">Sign Up with new Account</button>
         </center>
+      </form>
+    </div>
+  </div>
+
+  <div class="afterLogin col-sm-6 mr-5">
+
+    <div class="d-flex row justify-content-center mt-3">
+      <!-- Input data form -->
+      <div class="col-sm-5 inputDataForm text-center pt-3">
+        <center>
+          <h5>Input your data</h5>
+          <form id="submitData" action="" method="post">
+            <div class="mt-2">
+              <label class="formLabel" for="">Gender</label>
+              <input class="formBox form-control col-sm-8" type="text" name="gender" placeholder="Input your gender">
+            </div>
+            <div class="mt-2">
+              <label class="formLabel" for="">Height</label>
+              <input class="formBox form-control col-sm-8" type="text" name="height" placeholder="Input your height">
+            </div>
+            <div class="mt-2">
+              <label class="formLabel" for="">Weight</label>
+              <input class="formBox form-control col-sm-8" type="text" name="weight" placeholder="Input weight">
+            </div>
+            <div class="mt-2">
+              <label class="formLabel" for="">Age</label>
+              <input class="formBox form-control col-sm-8" type="text" name="age" placeholder="Input age">
+            </div>
+            <button class="btn submitData mt-3">Sign In</button>
+        </center>
         </form>
       </div>
+
+
 
       <form id="form-nutrition">
         <div class="d-flex flex-column">
@@ -120,14 +96,18 @@
         <div class="d-flex flex-column">
           <label>Nutrition</label>
           <input type="text" id="input-nutrition" placeholder="Ex: Calcium">
-          <button class="btn btn-primary col-sm-2 mt-2" id="btn-nutrition" type="submit">Check</button>
+          <button class="btn btn-primary mt-2" id="btn-nutrition" type="submit">Check</button>
         </div>
       </form>
     </div>
-  
+
+
+
     <!-- Fetch Data Nutrition -->
     <div id="nutritionData"></div>
   </div>
+
+
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
