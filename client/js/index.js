@@ -22,6 +22,12 @@ $(document).ready(function () {
     }
     getNutrition(input)
   })
+
+  $('#youtubeSearch').submit(function () {
+    const q = $('#q').val()
+    youtubeSearch(q)
+  })
+
 })
 
 function getBmi(data) {
@@ -86,6 +92,7 @@ function getNutrition(input) {
           showCancelButton: false,
           focusConfirm: false,
         })
+        youtubeSearch(input.food)
       }
       else {
         Swal.fire({
@@ -153,4 +160,26 @@ function signOut() {
     console.log('User signed out.');
   });
   noToken()
+}
+
+
+function youtubeSearch(q) {
+  event.preventDefault()
+  $.ajax({
+      url: `http://localhost:3000/youtube/search?q=${q} food`,
+      method: 'GET'
+  })
+  .done(function (results) {
+      $('#search-result').empty()
+      results.items.forEach(result => {
+        $('#search-result').append(`
+        <div class="foodVideo"><iframe width="480" height="360"
+        src="https://www.youtube.com/embed/${result.id.videoId}">
+        </iframe>
+        </div>`)
+      })
+  })
+  .fail(function (jqXHR, textstatus) {
+      console.log('fail', textstatus)
+  })
 }

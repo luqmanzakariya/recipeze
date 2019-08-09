@@ -4,7 +4,6 @@ class NutritionController {
 
   static getNutrition(req,res,next){
     let {nutrition,food} = req.query
-    console.log('===', nutrition, food)
     axios({
       method: "get",
       url: `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/quickAnswer?q=How much ${nutrition} is in ${food}?`,
