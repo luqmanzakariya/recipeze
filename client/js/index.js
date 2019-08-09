@@ -2,7 +2,6 @@ const baseUrl = `http://localhost:3000`
 
 $(document).ready(function () {
   isLogin()
-<<<<<<< HEAD
   renderButton()
 })
 
@@ -25,7 +24,6 @@ function renderButton() {
     'onfailure': onFailure
   });
 }
-=======
 
   $('#form-nutrition').submit(function(event){
     event.preventDefault()
@@ -70,7 +68,6 @@ function getNutrition(input){
     })
 }
 
->>>>>>> nutrition add client
 //============= Hide and Show =============
 function isLogin() {
   if (localStorage.getItem('token')) {
