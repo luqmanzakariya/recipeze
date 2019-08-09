@@ -48,7 +48,7 @@ class UserController {
 
   static loginGoogle(req, res, next){
     client.verifyIdToken({
-      idToken: token,
+      idToken: req.body.idToken,
       audience: process.env.GOOGLE_CLIENT_ID
     })
       .then((ticket)=>{
