@@ -1,5 +1,6 @@
-.brandNav{
+/* .brandNav{
   color:white !important
+<<<<<<< HEAD
 }
 
 .signInBox{
@@ -57,4 +58,14 @@
   background-color: whitesmoke;
   color: black;
   transition: 0.5s all;
+=======
+} */
+
+nav {
+  background-color: #EAEAEA !important
+}
+
+body{
+  background-color: #FFFFFF
+>>>>>>> nutrition add client
 }
