@@ -4,6 +4,7 @@ $(document).ready(function () {
   isLogin()
   renderButton()
   $('#form-nutrition').submit(function(event){
+    console.log('masuk')
     event.preventDefault()
     let input={
       food: $('#input-food').val(),
@@ -78,22 +79,23 @@ function isLogin() {
 }
 
 function hasToken() {
-  $('.mainWeb').show()
+  $('.signInBox').hide()
   // $('#buttonSignIn').hide()
-  // $('#buttonSignOut').show()
+  $('#buttonSignOut').show()
 }
 
 function noToken() {
-  $('.mainWeb').hide()
+  $('.signInBox').show()
   // $('#buttonSignIn').show()
-  // $('#buttonSignOut').hide()
+  $('#buttonSignOut').hide()
 }
 
 //============= Google Signin =============
 function onSignIn(googleUser) {
+  console.log('masuk google nih')
   const idToken = googleUser.getAuthResponse().id_token
   axios({
-    url: `${baseUrl}/loginGoogle`,
+    url: `${baseUrl}/users/loginGoogle`,
     method: 'post',
     dataType: 'json',
     data: { idToken }
