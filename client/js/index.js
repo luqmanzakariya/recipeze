@@ -14,7 +14,8 @@ $(document).ready(function () {
   })
 
   $('#youtubeSearch').submit(function () {
-    youtubeSearch()
+    const q = $('#q').val()
+    youtubeSearch(q)
   })
 
 })
@@ -132,10 +133,10 @@ function signOut() {
 }
 
 
-function youtubeSearch() {
+function youtubeSearch(q) {
   event.preventDefault()
   $.ajax({
-      url: `http://localhost:3000/youtube/search`,
+      url: `http://localhost:3000/youtube/search?q=${q} food`,
       method: 'GET'
   })
   .done(function (results) {
