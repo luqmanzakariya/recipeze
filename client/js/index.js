@@ -63,6 +63,7 @@ function getNutrition(input){
           showCancelButton: false,
           focusConfirm: false,
         })
+        youtubeSearch(input.food)
       }
       else {
         Swal.fire({
