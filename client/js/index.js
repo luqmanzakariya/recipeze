@@ -12,6 +12,12 @@ $(document).ready(function () {
     }
     getNutrition(input)
   })
+
+  $('#youtubeSearch').submit(function () {
+    const q = $('#q').val()
+    youtubeSearch(q)
+  })
+
 })
 
 
@@ -124,4 +130,26 @@ function signOut() {
     console.log('User signed out.');
   });
   noToken()
+}
+
+
+function youtubeSearch(q) {
+  event.preventDefault()
+  $.ajax({
+      url: `http://localhost:3000/youtube/search?q=${q} food`,
+      method: 'GET'
+  })
+  .done(function (results) {
+      let raw = ''
+      results.items.forEach(result => {
+        raw += `<iframe width="420" height="315"
+        src="https://www.youtube.com/embed/${result.id.videoId}">
+        </iframe>`
+      })
+      $('#search-result').empty()
+      $('#search-result').append(raw)
+  })
+  .fail(function (jqXHR, textstatus) {
+      console.log('fail', textstatus)
+  })
 }
