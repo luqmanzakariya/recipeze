@@ -1,9 +1,22 @@
-.brandNav{
+/* .brandNav{
   color:white !important;
-}
+} */
 
 .navbar{
   background-color: black !important;
+}
+
+#buttonSignOut{
+  background-color: black;
+  border: 1px solid whitesmoke;
+  color: white
+}
+
+#buttonSignOut:hover{
+  background-color: whitesmoke;
+  border: 1px solid black;
+  color: black;
+  transition: 0.5s all;
 }
 
 .signInBox{
