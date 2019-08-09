@@ -16,9 +16,7 @@
 <body>
   <nav class="d-flex justify-content-between navbar navbar-expand-sm navbar-dark">
     <div>
-      <img class="navbar-brand"
-        src="./style/logo.png"
-        style="height:70px;width:120px">
+      <img class="navbar-brand" src="./style/logo.png" style="height:70px;width:120px">
     </div>
 
     <div class="d-flex">
@@ -67,23 +65,29 @@
           <form id="submitData" action="" method="post">
             <div class="mt-2">
               <label class="formLabel" for="">Gender</label>
-              <input class="formBox form-control col-sm-8" type="text" name="gender" autocomplete="off" placeholder="Input your gender">
+              <input class="formBox form-control col-sm-8" type="text" name="gender" autocomplete="off"
+                placeholder="Input your gender">
             </div>
             <div class="mt-2">
               <label class="formLabel" for="">Height</label>
-              <input class="formBox form-control col-sm-8" type="text" name="height" autocomplete="off" placeholder="Input your height">
+              <input class="formBox form-control col-sm-8" type="text" name="height" autocomplete="off"
+                placeholder="Input your height">
             </div>
             <div class="mt-2">
               <label class="formLabel" for="">Weight</label>
-              <input class="formBox form-control col-sm-8" type="text" name="weight" autocomplete="off" placeholder="Input weight">
+              <input class="formBox form-control col-sm-8" type="text" name="weight" autocomplete="off"
+                placeholder="Input weight">
             </div>
             <div class="mt-2">
               <label class="formLabel" for="">Age</label>
-              <input class="formBox form-control col-sm-8" type="text" name="age" autocomplete="off" placeholder="Input age">
+              <input class="formBox form-control col-sm-8" type="text" name="age" autocomplete="off"
+                placeholder="Input age">
             </div>
             <button class="btn submitData mt-3">Sign In</button>
         </center>
         </form>
+
+        
       </div>
 
 
@@ -99,12 +103,16 @@
           <button class="btn btn-primary mt-2" id="btn-nutrition" type="submit">Check</button>
         </div>
       </form>
+
+      <div class="d-flex flex-column" id="nutritionData"></div>
     </div>
+
+    
 
 
 
     <!-- Fetch Data Nutrition -->
-    <div id="nutritionData"></div>
+    
   </div>
 
 
@@ -112,18 +120,17 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-  <div id="search-box">
-    <form class="form-inline" method="GET" style="margin-top: 1.5rem; margin-bottom: 1.5rem"
-        id="youtubeSearch">
-        <input type="text" placeholder="Search Your Food" id="q" aria-label="Search"
-            style="margin-right: 1rem">
-        <button class="btn btn--white" type="submit">Search</button>
+  <!-- <div id="search-box">
+    <form class="form-inline" method="GET" style="margin-top: 1.5rem; margin-bottom: 1.5rem" id="youtubeSearch">
+      <input type="text" placeholder="Search Your Food" id="q" aria-label="Search" style="margin-right: 1rem">
+      <button class="btn btn--white" type="submit">Search</button>
     </form>
-</div>
-<div id="search-result"></div>
+  </div> -->
+  <div id="search-result"></div>
 
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
