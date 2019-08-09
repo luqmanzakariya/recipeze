@@ -2,6 +2,7 @@ const baseUrl = `http://localhost:3000`
 
 $(document).ready(function () {
   isLogin()
+<<<<<<< HEAD
   renderButton()
 })
 
@@ -24,6 +25,52 @@ function renderButton() {
     'onfailure': onFailure
   });
 }
+=======
+
+  $('#form-nutrition').submit(function(event){
+    event.preventDefault()
+    let input={
+      food: $('#input-food').val(),
+      nutrition: $('#input-nutrition').val()
+    }
+    getNutrition(input)
+  })
+})
+
+//============= Get Nutrition =============
+function getNutrition(input){
+  console.log('masuk', input)
+  axios({
+    url: `${baseUrl}/nutrition/?food=${input.food}&nutrition=${input.nutrition}`,
+    method: 'get',
+    dataType: 'json',
+  })
+    .then(({data})=>{
+      if (data.answer){
+        Swal.fire({
+          title: '<strong>Nutrition <u>Info</u></strong>',
+          html:
+          `<img src="${data.image}" alt="Image Food"><br>` +
+            `${data.answer}`,
+          showCloseButton: true,
+          showCancelButton: false,
+          focusConfirm: false,
+        })
+      }
+      else {
+        Swal.fire({
+          type: 'error',
+          title: 'Oops...',
+          text: 'Info Not Found!',
+        })
+      }
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+}
+
+>>>>>>> nutrition add client
 //============= Hide and Show =============
 function isLogin() {
   if (localStorage.getItem('token')) {

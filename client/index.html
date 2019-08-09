@@ -9,15 +9,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./style/style.css" type="text/css">
-
+  <meta name="google-signin-client_id" content="284811322674-47mfvv1p6bicin65kbb7dnggdtq02b9a.apps.googleusercontent.com">
 </head>
 
 <body>
-  <nav class="d-flex justify-content-between navbar navbar-expand-sm navbar-dark bg-dark">
+  <nav class="d-flex justify-content-between navbar navbar-expand-sm navbar-dark">
     <div>
-      <img class="navbar-brand" src="https://goodfood.hr/wp-content/uploads/2017/04/logoweb.png"
-        style="height:70px;width:70px">
-      <a class="brandNav">Good Food</a>
+      <img class="navbar-brand" src="https://www.brandbucket.com/sites/default/files/logo_uploads/26498/xlarge_recipeze.png" style="height:70px;width:70px">
     </div>
 
     <div class="d-flex">
@@ -52,19 +50,35 @@
     </center>
     </form>
   </div>
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+
   <meta name="google-signin-client_id"
     content="284811322674-47mfvv1p6bicin65kbb7dnggdtq02b9a.apps.googleusercontent.com">
+  <div class="d-flex row justify-content-center mt-3">
+    <div class="col-sm-4">
+      <form id="form-nutrition">
+        <div class="d-flex flex-column">
+          <label>What to eat?</label>
+          <input type="text" id="input-food" placeholder="Ex: Noodles, Sushi, Meat">
+        </div>
+        <div class="d-flex flex-column">
+          <label>Nutrition</label>
+          <input type="text" id="input-nutrition" placeholder="Ex: Calcium">
+          <button class="btn btn-primary col-sm-2 mt-2" id="btn-nutrition" type="submit">Check</button>   
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <!-- Fetch Data Nutrition -->
+    </div>
+    <div id="nutritionData"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
   <script src="./js/index.js"></script>
 </body>
 
