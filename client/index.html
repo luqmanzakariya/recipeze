@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./style/style.css" type="text/css">
-  
+
 </head>
+
 <body>
   <nav class="d-flex justify-content-between navbar navbar-expand-sm navbar-dark bg-dark">
     <div>
-      <img class="navbar-brand" src="https://goodfood.hr/wp-content/uploads/2017/04/logoweb.png" style="height:70px;width:70px">
+      <img class="navbar-brand" src="https://goodfood.hr/wp-content/uploads/2017/04/logoweb.png"
+        style="height:70px;width:70px">
       <a class="brandNav">Good Food</a>
     </div>
 
@@ -22,12 +26,46 @@
     </div>
   </nav>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <div class="signInBox text-center pt-3">
+    <form action="" method="post">
+      <center>
+      <h5>Sign In</h5>
+        <div id="my-signin2" class=""></div>
+        <div class="signInSeparator row">
+          <hr class="signInhr">
+          <h6 class="orHr">Or</h6>
+          <hr class="signInhr">
+        </div>
+      <!-- <div class="g-signin2" id="buttonSignIn" data-onsuccess="onSignIn"></div> -->
+
+      <div class="">
+        <label class="formLabel" for="">Email</label>
+        <input class="formBox form-control col-sm-8" type="text" placeholder="Input your email address">
+      </div>
+      <div class="mt-2">
+        <label class="formLabel col-sm-8" for="">Password</label>
+        <input class="formBox form-control col-sm-8" type="text" placeholder="Input your password">
+      </div>
+      <button class="btn signInBtn mt-3">Sign In</button>
+      <hr class="signUpSeparator">
+      <button class="btn signUp">Sign Up with new Account</button>
+    </center>
+    </form>
+  </div>
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <meta name="google-signin-client_id" content="284811322674-47mfvv1p6bicin65kbb7dnggdtq02b9a.apps.googleusercontent.com">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+  <meta name="google-signin-client_id"
+    content="284811322674-47mfvv1p6bicin65kbb7dnggdtq02b9a.apps.googleusercontent.com">
   <script src="./js/index.js"></script>
 </body>
+
 </html>

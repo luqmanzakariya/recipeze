@@ -1,3 +1,60 @@
 .brandNav{
   color:white !important
 }
+
+.signInBox{
+  background-color: black;
+  width: 350px;
+  height: 450px;
+  border-radius: 7%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: whitesmoke;
+}
+
+.formLabel{
+  color: whitesmoke;
+}
+
+.signInBtn{
+  background-color: black;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  height: 40px;
+}
+
+.signInBtn:hover{
+  background-color: whitesmoke;
+  color: black;
+  transition: 0.5s all;
+}
+
+.signInhr{
+  border: 1px solid whitesmoke;
+  width: 40%;
+  margin: 20px 0px;
+}
+
+.orHr{
+  margin: 10px 14px;
+}
+
+.signUpSeparator{
+  border: 1px solid whitesmoke;
+  width: 70%;
+}
+
+.signInSeparator{
+  width: 70%;
+}
+
+.signUp{
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  height: 40px;
+}
+
+.signUp:hover{
+  background-color: whitesmoke;
+  color: black;
+  transition: 0.5s all;
+}
