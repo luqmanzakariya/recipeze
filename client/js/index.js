@@ -2,10 +2,10 @@ const baseUrl = `http://localhost:3000`
 
 $(document).ready(function () {
   isLogin()
-  renderButton()
+  
   $('#form-nutrition').submit(function(event){
-    console.log('masuk')
     event.preventDefault()
+    console.log('masuk')
     let input={
       food: $('#input-food').val(),
       nutrition: $('#input-nutrition').val()
@@ -17,25 +17,25 @@ $(document).ready(function () {
 
 
 
-function onSuccess(googleUser) {
-  console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-}
+// function onSuccess(googleUser) {
+//   console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+// }
 
-function onFailure(error) {
-  console.log(error);
-}
+// function onFailure(error) {
+//   console.log(error);
+// }
 
-function renderButton() {
-  gapi.signin2.render('my-signin2', {
-    'scope': 'profile email',
-    'width': 230,
-    'height': 40,
-    'longtitle': true,
-    'theme': 'light',
-    'onsuccess': onSuccess,
-    'onfailure': onFailure
-  });
-}
+// function renderButton() {
+//   gapi.signin2.render('my-signin2', {
+//     'scope': 'profile email',
+//     'width': 230,
+//     'height': 40,
+//     'longtitle': true,
+//     'theme': 'light',
+//     'onsuccess': onSuccess,
+//     'onfailure': onFailure
+//   });
+// }
 
 
 //============= Get Nutrition =============
@@ -83,14 +83,16 @@ function isLogin() {
 
 function hasToken() {
   $('.signInBox').hide()
-  // $('#buttonSignIn').hide()
+  $('.beforeLogin').hide()
   $('#buttonSignOut').show()
+  $('.afterLogin').show()
 }
 
 function noToken() {
   $('.signInBox').show()
-  // $('#buttonSignIn').show()
+  $('.beforeLogin').show()
   $('#buttonSignOut').hide()
+  $('.afterLogin').hide()
 }
 
 //============= Google Signin =============
